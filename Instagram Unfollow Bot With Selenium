@@ -1,0 +1,29 @@
+from selenium import webdriver
+import time
+from selenium.webdriver.common.keys import Keys
+
+path=r"C:\Program Files (x86)\chromedriver.exe"
+drive=webdriver.Chrome(path)
+drive.implicitly_wait(5)
+
+drive.get("https://www.instagram.com/")
+time.sleep(2)
+search=drive.find_element_by_name("username")
+write=drive.find_element_by_name("password")
+search.send_keys("Enter Your Username Here")
+write.send_keys("Enter Your Password Here")
+login_button = drive.find_element_by_xpath("//button[@type='submit']")
+login_button.click()
+bc=drive.find_element_by_xpath('//button[text()="Not Now"]')
+bc.click()
+abc=drive.find_element_by_xpath('//button[text()="Turn On"]')
+abc.click()
+drive.get("https://www.instagram.com/mana.v6709/following/")
+following=drive.find_element_by_xpath("//a[contains(@href,'/following')]").click()
+time.sleep(3)
+for i in range(12):
+    drive.find_element_by_xpath('//button[text()="Following"]').click()
+    drive.find_element_by_xpath('//button[text()="Unfollow"]').click()
+    time.sleep(0.5)
+    
+

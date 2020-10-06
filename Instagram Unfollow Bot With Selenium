@@ -18,7 +18,7 @@ bc=drive.find_element_by_xpath('//button[text()="Not Now"]')
 bc.click()
 abc=drive.find_element_by_xpath('//button[text()="Turn On"]')
 abc.click()
-drive.get("https://www.instagram.com/mana.v6709/following/")
+drive.get("https://www.instagram.com/"Here Put Your Username"/following/") #<----- Here Put Your Username
 following=drive.find_element_by_xpath("//a[contains(@href,'/following')]").click()
 time.sleep(3)
 for i in range(12):

@@ -1,8 +1,10 @@
-from selenium import webdriver
-import time
+#This python script will automatic unfollow others and saves your time.
+
+from selenium import webdriver #using selenium for web automation
+import time #using time for delay
 from selenium.webdriver.common.keys import Keys
 
-path=r"C:\Program Files (x86)\chromedriver.exe"
+path=r"C:\Program Files (x86)\chromedriver.exe" #You need to change this path accordingly.
 drive=webdriver.Chrome(path)
 drive.implicitly_wait(5)
 
